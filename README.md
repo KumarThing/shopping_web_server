@@ -44,9 +44,8 @@ ___
 User can:
 - Type a shopping item
 - Submit it
-- Item is appended to the global slice list []string
 - Page updates to show the newly added item
-- Option to return to the home page
+- Option to delete it / return back the home page or go to show all list. 
 
 3. Show All Page
 
