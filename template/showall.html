@@ -12,13 +12,10 @@
        <h1> All shopping List items.</h1>
 
        <ul>
-        {{range $i, $v :=.}}
+        {{range .}}
             <li>
-                {{ $v }}
-                <form action="/delete" method="post">
-                    <input type="hidden" name="index" value="{{ $i }}">
-                    <button type="button">Delete</button>
-                </form>
+                {{ . }}
+               
 
             </li>
 
