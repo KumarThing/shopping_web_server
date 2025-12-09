@@ -45,7 +45,7 @@ User can:
 - Type a shopping item
 - Submit it
 - Page updates to show the newly added item
-- Option to delete it / return back the home page or go to show all list. 
+- Option to delete it , return back the home page or go to show all list. 
 
 3. Show All Page
 
