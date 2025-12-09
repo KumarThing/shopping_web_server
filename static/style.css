@@ -1,7 +1,13 @@
 body {
+    
     text-align: center;
     background-color: antiquewhite;
     font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 .button {
