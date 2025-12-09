@@ -25,8 +25,7 @@ ___
 ├── /template
 │   ├── home.html
 │   ├── add.html
-│   ├── showall.html
-│   
+│   └── showall.html   
 │
 └── /static
     └── style.css
