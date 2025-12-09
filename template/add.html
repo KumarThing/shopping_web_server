@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adding list</title>
+    <title>Adding List</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Adding shopping list</h1>
+
+    <h1>Add Shopping Item</h1>
 
     <form action="/add" method="post">
-        <input type="text" placeholder="enter your shopping item" name="item" required>
-        <button class="button" type="submit">Add</button>
+        <input type="text" name="item" placeholder="Enter shopping item">
+        <button type="submit">Add</button>
     </form>
 
-    
+    <h2>Current List:</h2>
 
-   <h2>Current list: </h2>
+    {{if .List}}
+        <ul>
+            {{range $i, $v := .List}}
+                <li>
+                    {{ $v }}
 
-   <ul>
-    {{range .}}
-    <li>{{.}}</li>
+                    
+                    <form action="/add" method="post" style="display:inline;">
+                        <input type="hidden" name="delete" value="{{ $i }}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            {{end}}
+        </ul>
     {{else}}
-    <li>No items yet.</li>
+        <p>No items yet.</p>
     {{end}}
-   </ul>
 
-   <a href="/">
-    <button class="button" type="button">Back to Home</button>
-    </a>  
+    <br>
+    <a href="/">
+        <button class="button" type="button">Back to Home</button>
+     </a>
     <a href="/showall">
-        <button class="button" type="button">Show all list</button>
-    </a>  
-
+        <button class="button" type="button">Show All List</button>
+    </a>
 
 </body>
 </html>
